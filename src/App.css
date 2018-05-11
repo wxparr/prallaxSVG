@@ -1,0 +1,170 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #333333;
+  height: 50px;
+  padding: 20px;
+  color: #CFCDCD;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.topology {
+  height: 80%;
+}
+
+.navbar {
+  padding-top: 0px;
+  padding-bottom:0px;
+  padding-left: 50px;
+  margin-bottom: 50px;
+}
+
+.login {
+  font-size: .80em;
+  margin-right:50px;
+}
+.logSearch {
+  padding-top: 0px;
+  margin-bottom: 20px;
+}
+
+#devnetLogo {
+  margin-left: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: -10px;
+  padding-right: 15px;
+}
+
+#navList {
+  padding-top:13px;
+}
+
+content {
+  margin-top: 120px;
+  margin-left: 0px;
+  display: block;
+  margin-top: -10px;
+  background: transparent;
+}
+
+@keyframes buttonTransition {
+  from {
+      transform: scale(0.1);
+  }
+  to {
+      transform: scale(1);
+  }
+}
+
+
+footer {
+  background: #cccccc;
+  height: 200px;
+}
+
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+.wrapper {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  overflow-x: hidden;
+  /* Enable scrolling on the page. */
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px;
+}
+
+.section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 120vh;  
+  padding-bottom: 185px;
+  /* For text formatting. */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #333333;
+  font-size: 40px;
+  text-shadow: 0 0 1px #000;
+}
+
+.support {
+  color: #333333;
+  font-size: 20px;
+  text-shadow: 0 0 1px #000;
+}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;  
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */ 
+  z-index: -1;
+}
+
+/* The styling for the static div. */
+.static {
+  background: #cccccc;
+}
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+.bg1::after {
+   background: url(./svg/logo.svg);
+   background-repeat: no-repeat;
+}
+
+.bg2::after {
+  /* background-image: url('https://placekitten.com/g/800/600'); */
+}
+/* 
+.innerCircle{
+  animation-duration: '2s';
+  animation-iteration-count: 'infinite';
+  animation-name: 'buttonTransition';
+  transform-origin: 'center center';
+  opacity: .13;
+  } */
+
+/* 
+  .a{
+    fill:#f2f2f2; 
+  }
+ .b{fill:#fff;}
+ .c{fill:#3c3f42;}
+ .d{opacity:0.4;} 
+ .e
+ .h{fill:#70797c }
+  .f{fill:#48d8a8 }
+  .g{fill:#e6e6e6 }
+  .h{opacity:0.3 }
+  .i{fill:#F59902 } */
+
+
+
